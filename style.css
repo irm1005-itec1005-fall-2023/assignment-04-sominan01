@@ -29,20 +29,56 @@
 */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--body-default-colour);
-  background-color: var(--body-background-colour);
-}
-
-main {
   min-height: 100vh;
-
+  
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url("images/sky.jpeg");
+}
+/*color: var(--body-default-colour);
+  background-color: var(--body-background-colour);*/
+
+main {
+  width:100%;
+  max-width:540px;
+  background-color: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
 }
 
+h2 {
+  text-align: center;
+}
 
-/****** Screen reader text utility clsas *******/
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  padding-bottom: 2rem;
+}
+
+input {
+  flex:1;
+  border:none;
+  background:#ced4da;
+  padding: 10px;
+  font-weight: 14px;
+  border-radius: 2rem;
+}
+
+button {
+  border:none;
+  padding: 10px 20px;
+  font-weight: 14px;
+  border-radius: 2rem;
+}
+
+/**** Screen reader text utility clsas *******/
 .sr-only {
   position: absolute;
   width: 1px;
@@ -54,3 +90,4 @@ main {
   white-space: nowrap;
   border-width: 0;
 }
+

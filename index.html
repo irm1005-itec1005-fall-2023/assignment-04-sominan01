@@ -24,7 +24,6 @@
   <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
 </head>
 <body>
-
   <!--
 
     Assignment 04 - Finishing a Todo List App
@@ -41,7 +40,22 @@
   -->
 
   <main>
-    <div id="app"></div>
+    <div class ="container"></div>
+    <h2>Reminders</h2>
+
+    <section class="form-example">
+      <form id="form-add">
+       <input type="text" id="item-name" placeholder="To-do List">
+       <button class="btn-primary" id="btn-1" type="submit">Add</button>
+      </form>
+    </section>
+
+    <section>
+      <ul class="form-results" id="to-do-list"></ul>
+      <p id="to-do-list-count"></p>
+    </section>
+  
+      
   </main>
 
   <!-- Add JavaScript File -->
