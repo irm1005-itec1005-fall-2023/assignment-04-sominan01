@@ -41,19 +41,21 @@
 
   <main>
     <div class ="container"></div>
-    <h2>Reminders</h2>
 
     <section class="form-example">
-      <form id="form-add">
-       <input type="text" id="item-name" placeholder="To-do List">
+      <h2>Reminders:</h2>
+      <label for="list-input"></label>
+      <form id="form-1">
+       <input type="text" id="list-input" placeholder="To-do List" required>
        <button class="btn-primary" id="btn-1" type="submit">Add</button>
       </form>
     </section>
 
     <section>
-      <ul class="form-results" id="to-do-list"></ul>
-      <p id="to-do-list-count"></p>
+      <ul class="form-results" id="form-results-1"></ul>
     </section>
+
+    <p id="todolist-count"></p>
   
       
   </main>
