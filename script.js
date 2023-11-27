@@ -24,10 +24,14 @@ function handlesubmit (event) {
 
     todolistArray.push(inputValue);
 
-    renderList();
+    //Clear the input
+    todolistInput.value = "";
+
+    renderData();
 
 }
 
+/*
 function renderList() {
     console.log ("Render List:", todolistArray);
 
@@ -42,16 +46,54 @@ function renderList() {
         todolistResult.prepend(tempList); 
 
     }
-
-    if (todolistArray.length === 0) {
-        todolistCountP.textContent = "Have a good rest day!"
-    }
-    else {
-        todolistCountP.textContent = "You have " + todolistArray.length + " things to do!";
-    }
+    
+    todolistCountP.textContent = "You have " + todolistArray.length + " things to do!";
+    
 
 }
 
 //call it the first time
-renderList();
+
+//lecture 19, button
+
+*/
+
+function renderData() {
+   
+    todolistResult.innerHTML ="";
+   
+    for (let i=0; i<todolistArray.length;i++) {
+        
+        let tempListItem = document.createElement("li");
+
+        tempListItem.textContent = todolistArray[i];
+
+        let tempButton = document.createElement ("button");
+
+        tempButton.textContent = "click";
+
+        tempButton.dataset.super =i;
+
+        tempButton.addEventListener("click",function(event){
+            console.log ("You clicked me");
+            console.log("You cliked on", event.target.dataset.super);
+
+            //Remove this item from the array 
+            todolistArray.splice(event.target.dataset.super,1);
+
+            //Rerender the list
+            renderData();
+        
+
+        });
+
+        tempListItem.appendChild(tempButton);
+
+        todolistResult.appendChild(tempListItem);
+
+    }
+
+    todolistCountP.textContent = "You have " + todolistArray.length + " things to do!";
+
+}
 
