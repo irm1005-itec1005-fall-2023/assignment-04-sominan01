@@ -78,18 +78,32 @@ input {
   border-radius: 2rem;
 } 
 
+.container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
 
-ul {
+/*ul {
   list-style: none;
   font-size: 17px;
   padding: 2rem;
   margin-top: -2rem;
+}*/
+
+.form-results {
+  list-style: none;
+  font-size: 18px;
+
 }
 
 .my-button {
   border:none;
   margin: 0.5rem;
-  background-color: #fff;
+  background-color: #fff
 }
 
 /**** Screen reader text utility clsas *******/
