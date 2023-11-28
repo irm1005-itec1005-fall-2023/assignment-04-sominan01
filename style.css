@@ -87,23 +87,25 @@ input {
   margin-bottom: 10px;
 }
 
-/*ul {
+ul {
+  background-color: #e63946;
   list-style: none;
   font-size: 17px;
-  padding: 2rem;
-  margin-top: -2rem;
-}*/
+  width: 100%;
+  margin: 0;
+  padding:0;
+}
 
-.form-results {
-  list-style: none;
-  font-size: 18px;
-
+ul li {
+  background-color: #fff;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .my-button {
-  border:none;
   margin: 0.5rem;
-  background-color: #fff
+  background-color: red;
 }
 
 /**** Screen reader text utility clsas *******/

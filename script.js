@@ -66,11 +66,14 @@ function renderData() {
         
         let tempListItem = document.createElement("li");
 
-        tempListItem.textContent = todolistArray[i];
+        //tempListItem.textContent = todolistArray[i];
 
         let tempButton = document.createElement ("button");
+        let tempParagraph = document.createElement("p");
 
-        tempButton.textContent = "☑️";
+        tempParagraph.textContent = todolistArray[i];
+
+        tempButton.textContent = "delete";
         tempButton.className = "my-button"; //Assign the button name
 
         tempButton.dataset.super =i;
@@ -89,6 +92,7 @@ function renderData() {
         });
 
         tempListItem.appendChild(tempButton);
+        tempListItem.appendChild(tempParagraph);
 
         todolistResult.appendChild(tempListItem);
 
@@ -97,4 +101,4 @@ function renderData() {
 
 }
 
-//lecture 10 14:40
+//lecture 10 14:40 CSS, mark as completed 
