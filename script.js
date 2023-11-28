@@ -70,7 +70,8 @@ function renderData() {
 
         let tempButton = document.createElement ("button");
 
-        tempButton.textContent = "click";
+        tempButton.textContent = "☑️";
+        tempButton.className = "my-button"; //Assign the button name
 
         tempButton.dataset.super =i;
 
@@ -93,7 +94,7 @@ function renderData() {
 
     }
 
-    todolistCountP.textContent = "You have " + todolistArray.length + " things to do!";
 
 }
 
+//lecture 10 14:40

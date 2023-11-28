@@ -71,11 +71,25 @@ input {
   border-radius: 2rem;
 }
 
-button {
+.btn-primary {
   border:none;
   padding: 10px 20px;
   font-weight: 14px;
   border-radius: 2rem;
+} 
+
+
+ul {
+  list-style: none;
+  font-size: 17px;
+  padding: 2rem;
+  margin-top: -2rem;
+}
+
+.my-button {
+  border:none;
+  margin: 0.5rem;
+  background-color: #fff;
 }
 
 /**** Screen reader text utility clsas *******/
