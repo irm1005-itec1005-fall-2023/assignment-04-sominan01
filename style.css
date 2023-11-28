@@ -80,7 +80,6 @@ input {
 
 .container {
   display: flex;
-  justify-content: space-between; 
   align-items: center; 
   border: 1px solid #ccc;
   padding: 10px;
@@ -100,12 +99,15 @@ ul li {
   background-color: #fff;
   display:flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 
 .my-button {
   margin: 0.5rem;
-  background-color: red;
+  background-color: rgb(143, 143, 143)172, 166, 166;
+  border:none;
+  border-radius: 2rem;
 }
 
 /**** Screen reader text utility clsas *******/

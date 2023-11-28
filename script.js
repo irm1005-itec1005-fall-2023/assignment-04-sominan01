@@ -31,33 +31,6 @@ function handlesubmit (event) {
 
 }
 
-/*
-function renderList() {
-    console.log ("Render List:", todolistArray);
-
-    todolistResult.innerHTML = "";
-
-    for (let index = 0; index < todolistArray.length; index++) {
-        
-        let tempList = document.createElement ("li");
-    
-        tempList.textContent = todolistArray[index];
-        
-        todolistResult.prepend(tempList); 
-
-    }
-    
-    todolistCountP.textContent = "You have " + todolistArray.length + " things to do!";
-    
-
-}
-
-//call it the first time
-
-//lecture 19, button
-
-*/
-
 function renderData() {
    
     todolistResult.innerHTML ="";
@@ -91,8 +64,8 @@ function renderData() {
 
         });
 
-        tempListItem.appendChild(tempButton);
         tempListItem.appendChild(tempParagraph);
+        tempListItem.appendChild(tempButton);
 
         todolistResult.appendChild(tempListItem);
 
@@ -101,4 +74,4 @@ function renderData() {
 
 }
 
-//lecture 10 14:40 CSS, mark as completed 
+//CSS, mark as completed 
