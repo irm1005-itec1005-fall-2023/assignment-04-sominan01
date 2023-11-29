@@ -55,6 +55,12 @@ function renderData() {
 
         tempButton.dataset.super =i;
 
+        tempParagraph.addEventListener("click", function (event) {
+            event.target.classList.toggle("strikethrough"); // Toggle the class for strikethrough
+            saveStrikethroughStatus(i, event.target.classList.contains("strikethrough"));
+        });
+
+
         tempButton.addEventListener("click",function(event){
             console.log ("You clicked me");
             console.log("You cliked on", event.target.dataset.super);
@@ -68,10 +74,13 @@ function renderData() {
 
         });
 
-        tempParagraph.addEventListener("click", function (event) {
-            event.target.classList.toggle("strikethrough"); // Toggle the class for strikethrough
-        });
 
+        const Striked = getStrikethroughStatus(i);
+        if (Striked) {
+            tempParagraph.classList.add("strikethrough");
+        }
+
+    
 
         tempListItem.appendChild(tempParagraph);
         tempListItem.appendChild(tempButton);
@@ -83,4 +92,12 @@ function renderData() {
 
 }
 
-//mark as completed 
+
+// Function to save strikethrough status to local storage
+function saveStrikethroughStatus(i, status) {
+    localStorage.setItem(`strikethrough_${i}`, status);
+}
+
+function getStrikethroughStatus(i) {
+    return localStorage.getItem(`strikethrough_${i}`) === 'true';
+}
