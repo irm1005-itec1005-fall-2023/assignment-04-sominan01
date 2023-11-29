@@ -12,10 +12,12 @@ let todolistResult = document.getElementById("form-results-1");
 
 let todolistCountP = document.getElementById("todolist-count");
 
+
 //Array of to do list
 let todolistArray = [];
 
 todolistForm.addEventListener("submit",handlesubmit)
+
 
 function handlesubmit (event) {
     event.preventDefault();
@@ -30,6 +32,7 @@ function handlesubmit (event) {
     renderData();
 
 }
+
 
 function renderData() {
    
@@ -49,6 +52,7 @@ function renderData() {
         tempButton.textContent = "delete";
         tempButton.className = "my-button"; //Assign the button name
 
+
         tempButton.dataset.super =i;
 
         tempButton.addEventListener("click",function(event){
@@ -64,6 +68,11 @@ function renderData() {
 
         });
 
+        tempParagraph.addEventListener("click", function (event) {
+            event.target.classList.toggle("strikethrough"); // Toggle the class for strikethrough
+        });
+
+
         tempListItem.appendChild(tempParagraph);
         tempListItem.appendChild(tempButton);
 
@@ -74,4 +83,4 @@ function renderData() {
 
 }
 
-//CSS, mark as completed 
+//mark as completed 

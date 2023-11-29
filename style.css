@@ -110,6 +110,17 @@ ul li {
   border-radius: 2rem;
 }
 
+.done-button {
+  margin: 0.5rem;
+  background-color: rgb(143, 143, 143)172, 166, 166;
+  border:none;
+  border-radius: 2rem;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
 /**** Screen reader text utility clsas *******/
 .sr-only {
   position: absolute;
